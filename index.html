@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" type="text/css" href="./index.css">
+    <title>Frontend Mentor | FAQ Accordion Card</title>
+</head>
+<body>
+    <div id="container">
+        <div id="text-container">
+            <h2>FAQ</h2>
+            <div class="question">
+                <h3>How many team members can I invite? <img class="drop-button" src="./images/icon-arrow-down.svg"></h3>
+                <p class="answer hide">
+                    You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.
+                </p>
+            </div>
+            <div class="question">
+                <h3 class="active-faq">What is the maximum file upload size?<img class="drop-button" src="./images/icon-arrow-down.svg"></h3>
+                <p class="answer">
+                    No more than 2GB. All files in your account must fit your allotted storage space.
+                </p>
+            </div>
+            <div class="question">
+                <h3>How do I reset my password?<img class="drop-button" src="./images/icon-arrow-down.svg"></h3>
+                <p class="answer hide">
+                    Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you.
+                </p>
+            </div>
+            <div class="question">
+                <h3>Can I cancel my subscription?<img class="drop-button" src="./images/icon-arrow-down.svg"></h3>
+                <p class="answer hide">
+                    Yes! Send us a message and we’ll process your request no questions asked.
+                </p>
+            </div>
+            <div class="question">
+                <h3>Do you provide additional support?<img class="drop-button" src="./images/icon-arrow-down.svg"></h3>
+                <p class="answer hide">
+                    Chat and email support is available 24/7. Phone lines are open during normal business hours.
+                </p>
+            </div>
+        </div>
+        <img id="illust-box-desktop" src="./images/illustration-box-desktop.svg">
+        <img id="illust-woman-online-mobile" src="./images/illustration-woman-online-mobile.svg">
+            <div id="decor">
+                <img id="bg-pattern-desktop" src="./images/bg-pattern-desktop.svg">
+                <img id="bg-pattern-mobile" src="./images/bg-pattern-mobile.svg">
+                <img id="illust-woman-online-desktop" src="./images/illustration-woman-online-desktop.svg">
+            </div>
+    </div>
+
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener noreferrer">Frontend Mentor</a>. 
+        Coded by Aeenur
+    </div>
+</body>
+<script>
+    document.querySelectorAll(".drop-button").forEach(each => {
+        let FAQuestion = each.parentNode;
+        let FAQAnswer = each.parentNode.nextElementSibling;
+        FAQuestion.addEventListener("click", function() { FAQuestion.classList.toggle("active-faq"); FAQAnswer.classList.toggle("hide"); });
+    });
+</script>
+</html>
