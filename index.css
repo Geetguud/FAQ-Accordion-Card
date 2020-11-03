@@ -135,7 +135,18 @@ body {
 }
 
 .attribution {
-    display: none;
+    width: 30rem;
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 700;
+    z-index: 5;
+}
+
+.attribution a {
+    color: var(--prime-text-blue);
 }
 
 @media (min-width: 1025px) {
@@ -162,4 +173,8 @@ body {
     }
 
     #text-container h2 { text-align: center; }
+}
+
+@media (max-width: 360px) {
+    html {font-size: 7.5px;}
 }
